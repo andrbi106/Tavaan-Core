@@ -9,7 +9,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Tavaan\\Core\\": ""
+            "Tavaan\\Core\\": "",
+            "Tavaan\\Support\\": "Support/"
         },
         "files": [
             "Support/helpers.php"

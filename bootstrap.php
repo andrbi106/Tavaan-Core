@@ -43,6 +43,7 @@ $autoloader = Autoloader::create(TVN_BASE_PATH);
 
 // نگاشت namespaceهای پایه (PSR-4)
 $autoloader->addNamespace('Tavaan\\Core\\', __DIR__ . '/');
+$autoloader->addNamespace('Tavaan\\Support\\', __DIR__ . '/Support/');
 $autoloader->addNamespace('Tavaan\\Engine\\', 'engines/*/src/');
 $autoloader->addNamespace('Tavaan\\EngineCore\\', 'vendor/andrbi106/tavaan-engine-core/src/');
 

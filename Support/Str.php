@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace Tavaan\Core\Support;
+namespace Tavaan\Support;
 
 /** ابزارهای رشته. */
 final class Str

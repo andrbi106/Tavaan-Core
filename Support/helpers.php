@@ -8,8 +8,8 @@ declare(strict_types=1);
  * این فایل توسط autoload files در composer.json بارگذاری می‌شود.
  */
 
-use Tavaan\Core\Support\Arr;
-use Tavaan\Core\Support\Str;
+use Tavaan\Support\Arr;
+use Tavaan\Support\Str;
 
 if (!function_exists('array_get')) {
     function array_get(array $array, ?string $key, mixed $default = null): mixed
