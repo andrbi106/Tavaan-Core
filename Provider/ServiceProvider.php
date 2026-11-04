@@ -12,6 +12,10 @@ declare(strict_types=1);
  *
  * در register() فقط bindingهای سبک در Container ثبت می‌شوند.
  * در boot() راه‌اندازی سنگین انجام می‌شود (پس از ثبت همهٔ providerها).
+ *
+ * ویژگی‌ها:
+ *   - $this->container — کانتینر اصلی (ContainerInterface)
+ *   - $this->app — alias برای $this->container (سازگاری با کد قدیمی)
  */
 
 namespace Tavaan\Core\Provider;
@@ -20,12 +24,17 @@ use Tavaan\Core\Contracts\Container\ContainerInterface;
 
 abstract class ServiceProvider
 {
+    /** Alias برای container (سازگاری با کدی که از $this->app استفاده می‌کند) */
+    public ContainerInterface $app;
+
     public function __construct(
         protected readonly ContainerInterface $container
-    ) {}
+    ) {
+        $this->app = $container;
+    }
 
     /**
-     * ثبت bindingها در Container.
+     * ثبتbindingها در Container.
      * در این stage نباید کار سنگین انجام شود.
      */
     abstract public function register(): void;
