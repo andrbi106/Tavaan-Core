@@ -9,10 +9,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Tavaan\\Core\\": "src/"
+            "Tavaan\\Core\\": ""
         },
         "files": [
-            "src/Support/helpers.php"
+            "Support/helpers.php"
         ]
     },
     "minimum-stability": "dev",
